@@ -5,7 +5,7 @@ class OauthController {
         this.oauthModel = new OauthModel(collection)
     }
 
-    toGetTokens = async (req, res) => {
+    async toGetTokens(req, res){
         try {
             const guid = req.query.guid
             const tokenPairs = await this.oauthModel.getTokenPairs(guid)
@@ -18,7 +18,7 @@ class OauthController {
             res.status(500).send()
         }
     }
-    toRefreshTokenPairs = async (req, res) => {
+    async toRefreshTokenPairs(req, res){
         try {
             const {accessToken, refreshToken} = req.query
             if (accessToken === undefined || refreshToken === undefined) {
