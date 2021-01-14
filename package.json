@@ -1,0 +1,14 @@
+{
+  "name": "oauth",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "express": "~4.16.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.6.3"
+  }
+}
